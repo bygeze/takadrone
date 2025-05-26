@@ -5,4 +5,15 @@ function mi_tema_enqueue_estilos() {
 }
 add_action('wp_enqueue_scripts', 'mi_tema_enqueue_estilos');
 
+function mi_tema_registrar_estilos() {
+    wp_register_style(
+        'portfolio-display',
+        get_template_directory_uri() . '/css/portfolio-display.css',
+        array(),
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'mi_tema_registrar_estilos');
+
 ?>
+
