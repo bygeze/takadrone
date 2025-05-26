@@ -8,11 +8,11 @@
 
             <?php
             // Thumbnail
-            if (has_post_thumbnail()) {
-                echo '<div class="portfolio-thumbnail">';
-                the_post_thumbnail('large');
-                echo '</div>';
-            }
+            //if (has_post_thumbnail()) {
+              //  echo '<div class="portfolio-thumbnail">';
+                //the_post_thumbnail('large');
+                //echo '</div>';
+            //}
 
             // Descripción (campo personalizado de texto plano)
             $descripcion = get_post_meta(get_the_ID(), '_mi_portfolio_descripcion', true);
@@ -21,18 +21,22 @@
             }
 
             // Video (archivo adjunto)
-            $video_id = get_post_meta(get_the_ID(), '_mi_portfolio_video_id', true);
-            if ($video_id) {
-                $video_url = wp_get_attachment_url($video_id);
-                if ($video_url) {
-                    echo '<div class="portfolio-video">';
-                    echo '<video controls style="max-width:100%; height:auto;">';
-                    echo '<source src="' . esc_url($video_url) . '" type="video/mp4">';
-                    echo 'Tu navegador no soporta video HTML5.';
-                    echo '</video>';
-                    echo '</div>';
-                }
-            }
+			$video_id = get_post_meta(get_the_ID(), '_mi_portfolio_video', true);
+
+			if ($video_id) {
+				$video_url = wp_get_attachment_url($video_id);
+				if ($video_url) {
+					?>
+					<video width="640" height="360" controls>
+						<source src="<?php echo esc_url($video_url); ?>" type="video/mp4" />
+						Tu navegador no soporta el video.
+					</video>
+					<?php
+				}
+			} else {
+				// Si no hay video, puedes mostrar la miniatura o no mostrar nada
+				// the_post_thumbnail('large'); // <- Comentado para no mostrar miniatura
+			}
             ?>
 
         <?php endwhile; endif; ?>
