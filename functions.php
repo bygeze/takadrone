@@ -2,9 +2,13 @@
 // Cargar hoja de estilos principal
 function mi_tema_enqueue_estilos() {
   wp_enqueue_style('mi-tema-style', get_stylesheet_uri());
-  wp_enqueue_style('mi-tema-general-style', get_stylesheet_directory_uri() . '/css/general.css');
 }
 add_action('wp_enqueue_scripts', 'mi_tema_enqueue_estilos');
+
+function mi_tema_enqueue_general() {
+    wp_enqueue_style('mi-tema-general-style', get_stylesheet_directory_uri() . '/css/general.css');
+  }
+  add_action('wp_enqueue_scripts', 'mi_tema_enqueue_general');
 
 function mi_tema_registrar_estilos() {
     wp_register_style(
