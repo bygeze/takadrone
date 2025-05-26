@@ -1,0 +1,48 @@
+#landing {
+    height: 100%;
+}
+
+#video-overlay {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#landing > video, #video-overlay {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+}
+
+#center-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#center-container > #centered-div {
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#centered-div > h1 {
+    font-size: 64px;
+}
+
+#centered-div > h2 {
+    font-size: 28px;
+}
+
+#centered-div > #separator1 {
+    margin: 30px auto;
+    height: 3px;
+    border-radius: 3px;
+    width: 100px;
+    background-color: #fff
+}

@@ -12,6 +12,12 @@ function mi_tema_registrar_estilos() {
         array(),
         null
     );
+    wp_register_style(
+        'landing',
+        get_template_directory_uri() . '/css/landing.css',
+        array(),
+        null
+    );
 }
 add_action('wp_enqueue_scripts', 'mi_tema_registrar_estilos');
 
