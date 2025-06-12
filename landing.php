@@ -1,7 +1,7 @@
 
 <div id="landing">
         <video autoplay muted loop id="landing-video">
-            <source src="<?php get_template_directory_uri() ?>/assets/shot-intro.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/shot-intro.mp4" type="video/mp4">
         </video>
 
         <div id="video-overlay"></div>
