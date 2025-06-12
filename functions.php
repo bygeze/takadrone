@@ -29,6 +29,12 @@ function mi_tema_registrar_estilos() {
         array(),
         null
     );
+        wp_register_style(
+        'where',
+        get_template_directory_uri() . '/css/where.css',
+        array(),
+        null
+    );
 }
 add_action('wp_enqueue_scripts', 'mi_tema_registrar_estilos');
 
