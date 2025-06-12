@@ -1,0 +1,41 @@
+#services {
+    padding: 40px 0 40px 0;
+}
+
+#services-flexbox {
+    display: flex;
+    gap: 20px 20px;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+
+.services-fb-item {
+
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid;
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
+    border-color: rgba(0,0,0,0.1)
+}
+
+.services-fb-item-icon {
+
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+
+.services-fb-item-icon img {
+    width: 72px;
+    
+}
+
+.services-item-title {
+    font-size: 22px;
+}
+
+#services {
+    text-align: center;
+}
